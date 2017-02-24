@@ -96,3 +96,7 @@ button{
   background-color: black;
   color:white;
 }
+/*help button*/
+#help{
+  display:none;
+}

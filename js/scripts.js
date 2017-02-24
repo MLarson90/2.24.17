@@ -68,5 +68,7 @@ $(document).ready(function(){
     var winner = win(tal);
     var blinker= blink("#win h1", 2 , 700);
   });
-
+  $(".hint").button(function(event){
+    var hintPressed = 
+  });
 });
