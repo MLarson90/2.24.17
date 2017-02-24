@@ -39,6 +39,10 @@ var talley = function(data){
    $("#win").show();
   };
  };
+ /*hint button*/
+ var hint =function(click){
+   $("#help").show();
+ }
 /*blinker*/
 function blink(elem,times,speed){
   if (times>0 || times<0){
@@ -68,7 +72,9 @@ $(document).ready(function(){
     var winner = win(tal);
     var blinker= blink("#win h1", 2 , 700);
   });
-  $(".hint").button(function(event){
-    var hintPressed = 
+  $("div.hint").submit(function(event){
+    event.preventDefault();
+    var helpClick = $("#clickHint").onClick();
+    var clickHelp = hint(helpClick);
   });
 });
