@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/stylesa.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.1.1.js"></script>
+  <script src="js/scriptsa.js"></script>
+  <title>Ping Pong</title>
+</head>
+  <body>
+<!--top of page-->
+    <div class ="top">
+      <h1 id="topper">Ping Pong</h1>
+      <h2 id="lowerTop">You beat team pong!</h2>
+      <h2>Logic Page</h2>
+    </div>
+<!--contains instructions/user input/answers-->
+    <div class="container">
+<!--contains instructions-->
+      <div class="instructions">
+        <h2> How it works</h2>
+        <p>This page will outline the logic used to create the ping pong game</p>
+      </div>
+<!--contains user input-->
+      <form class="userInput">
+        <div class="form-group">
+          <label for="swing">Enter a number</label>
+          <input id="swing" class="form-control" type="number" min="1">
+        </div>
+        <button type="submit" class="btn">Show Logic</button>
+      </form>
+      <ul id="answer">
+      </ul>
+      <p id="logic">The computer picks 3 numbers, in this case it is 3, 5,and 15. If the number you enter is divisable by one of these numbers you get a point. If not team pong gets the point.<p>
+    </div>
+  </body>
+</html>

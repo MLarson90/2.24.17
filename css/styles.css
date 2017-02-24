@@ -91,13 +91,24 @@ button{
   display:none;
   text-align: center;
   padding-top:360px;
-  width:100%;
-  height: 100%;
+  background-color: black;
+  color:white;
+}
+/*lose screen*/
+#loser h1{
+  font-size: 160px;
+  background-color: black;
+}
+#loser{
+  display:none;
+  text-align: center;
+  padding-top:360px;
   background-color: black;
   color:white;
 }
 /*help button*/
 #help{
+  font-size: 23px;
   display:none;
   color:white;
 }

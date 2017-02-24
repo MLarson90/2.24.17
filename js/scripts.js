@@ -1,48 +1,45 @@
 //Backend
-var score=0;
+
+var cpuScore= [];
+var score = [];
+for (var i =0; i<=30; i++){
 var hit =function(playerSwing){
   if(playerSwing%15 === 0){
     $(".ping").hide();
     $(".pong").hide();
     $(".pingPong").show();
     $(".rob").hide();
-    return true;
+    $(score).push(score++);
   }else if(playerSwing%5 === 0){
     $(".ping").hide();
     $(".pong").show();
     $(".pingPong").hide();
     $(".rob").hide();
-    return true;
+    $(score).push(score++);
   }else if (playerSwing%3 === 0){
     $(".ping").show();
     $(".pong").hide();
     $(".pingPong").hide();
     $(".rob").hide();
-    return true;
+    $(score).push(score++);
   }else{
     $(".ping").hide();
     $(".pong").hide();
     $(".pingPong").hide();
     $(".rob").show();
-    return false;
+    $(cpuScore).push(cpuScore++);
   };
-};
-var talley = function(data){
-  if (data === true){
-     return score = score + 1;
-  };
-};
- var win = function(score){
-   if(score === 10){
-   $("#top").hide();
-   $(".container").hide();
-   $("#win").show();
+  if(score === 10){
+    $("#top").hide();
+    $(".container").hide();
+    $("#win").show();
+   }else if(cpuScore === 20){
+    $("#top").hide();
+    $(".container").hide();
+    $("#loser").show();
+   };
   };
  };
- /*hint button*/
- var hint =function(click){
-   $("#help").show();
- }
 /*blinker*/
 function blink(elem,times,speed){
   if (times>0 || times<0){
@@ -68,13 +65,11 @@ $(document).ready(function(){
     event.preventDefault();
     var paddle = parseInt($("input#swing").val());
     var result = hit(paddle);
-    var tal = talley(result);
-    var winner = win(tal);
+    // tal = talley(result);
+
     var blinker= blink("#win h1", 2 , 700);
   });
-  $("div.hint").submit(function(event){
-    event.preventDefault();
-    var helpClick = $("#clickHint").onClick();
-    var clickHelp = hint(helpClick);
+  $("#clickHint").click(function(){
+    $("#help").toggle();
   });
 });
