@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.1.1.js"></script>
+  <script src="js/scripts2.js"></script>
+  <title>Ping Pong</title>
+</head>
+  <body>
+<!--top of page-->
+    <div class ="top">
+      <h1 id="topper">Ping Pong</h1>
+      <h2 id="lowerTop">Can you beat Team Pong?</h2>
+      <h2>Level 2</h2>
+    </div>
+<!--contains instructions/user input/answers-->
+    <div class="container">
+<!--contains instructions-->
+      <div class="instructions">
+        <h2> Let's Play!</h2>
+        <p>Find the pattern to win</p>
+        <ol>
+          <li>If you enter a correct number you will receive a "ping" a "pong" or a "ping-pong"</li>
+          <li>If you enter a wong number Team Pong will recive a point</li>
+          <li>To win get 10 "pings", "pongs", or "ping-pongs" before Team Pong gets 15 points!</li>
+        <ol>
+          <div class="player">
+            <h3>Player Score: <span id="playerS"></span>
+            <h3>CPU Score: <span id="cpuS"></span><h3>
+          </div>
+      </div>
+<!--contains user input-->
+      <form class="userInput">
+        <div class="form-group">
+          <label for="swing">Enter a number</label>
+          <input id="swing" class="form-control" type="number" min="1">
+        </div>
+        <button type="submit" class="btn">Swing!</button>
+      </form>
+<!--hint button-->
+      <div class="hint">
+        <button id="clickHint" type="submit" class="btn-btn-warning">Need a hint?</button>
+        <h2 id="help">The number you input needs to be divisable by 1 of 3 pre-set numbers</h2>
+      </div>
+<!--contains answers-->
+      <div class="ping">
+        <h1 class="answer">Ping!</h1>
+      </div>
+      <div class="pong">
+        <h1 class="answer">Pong!<h1>
+      </div>
+      <div class="pingPong">
+        <h1 class="answer">Ping-Pong</h1>
+      </div>
+      <div class="rob">
+        <h1 class="answer">Point Team Pong!<h1>
+      </div>
+    </div>
+<!--Winning and advancing to next level-->
+    <div id="win">
+      <h1>YOU WIN!!!</h1>
+      <button><a href="level3.html">Next Level</a></button>
+    </div>
+    <div id="loser">
+      <h1>YOU LOOSE!</h1>
+      <button><a href="level2.html">Try again?</a></button>
+    </div>
+  </body>
+</html>

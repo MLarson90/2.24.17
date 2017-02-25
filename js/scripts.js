@@ -61,14 +61,11 @@ function blink(elem,times,speed){
   }
 };
 //Frontend
-
 $(document).ready(function(){
   $("form.userInput").submit(function(event){
     event.preventDefault();
     var paddle = parseInt($("input#swing").val());
     var result = hit(paddle);
-    // tal = talley(result);
-
     var blinker= blink("#win h1", 2 , 700);
   });
   $("#clickHint").click(function(){
