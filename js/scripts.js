@@ -38,6 +38,8 @@ var hit =function(playerSwing){
     $(".container").hide();
     $("#loser").show();
    };
+   $("#playerS").text(score);
+   $("#cpuS").text(cpuScore);
   };
  };
 /*blinker*/

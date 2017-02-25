@@ -3,7 +3,6 @@ var array = [];
 var newArray = 0;
 
 var hit = function(input){
-  $("#answer").empty();
   for(i=0; i<=(input); i++){
     newArray = newArray+1;
     array.push(newArray);
@@ -23,12 +22,11 @@ var hit = function(input){
 //Frontend
 
 $(document).ready(function(){
-  $("form.userInput").submit(function(event){
-    event.preventDefault();
 
+  $("form.userInput").submit(function(event){
+    $("#answer").empty();
+    event.preventDefault();
     var pad = parseInt($("input#swing").val());
     var swing = hit(pad);
-
-
   });
 });
