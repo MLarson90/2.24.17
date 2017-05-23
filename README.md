@@ -8,10 +8,7 @@
 
 _This is a program that will take the input of a number from a user and return "ping","pong", or "ping-pong"_
 
-## Setup/Installation Requirements
 
-* _Access website on https://mlarson90.git.io/2.24.17 ._
-* _follow in site instructions to play_
 
 ## _Specifications_
 
